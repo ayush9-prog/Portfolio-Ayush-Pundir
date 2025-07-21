@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap');
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+:root {
+    /* Nav Bar */
+    --font-color-logo: rgb(240, 227, 227);
+    --font-color-default: rgb(238, 238, 238);
+    --background-color: rgb(230, 230, 230);
+    --background-color-navbar: rgb(22, 22, 22);
+}
+
+/* Items position */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color-navbar);
+    color: var(--font-color-default);
+    padding: 10px;
+    margin: 50px 200px;
+}
+
+.items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.a1 {
+    font-family: "TikTok Sans", sans-serif;
+    font-weight: 750;
+    color: var(--font-color-logo);
+    position: relative;
+    left: 20px;
+    bottom: 2px;
+}
+
+.items li a {
+    font-family: "TikTok Sans", sans-serif;
+    font-weight: 300;
+}
+
+.items {
+    display: flex;
+    gap: 23px;
+}
+
+.items li {
+    position: relative;
+    right: 10px;
+}

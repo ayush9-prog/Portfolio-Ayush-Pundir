@@ -32,6 +32,7 @@ body::before {
 /* Colors */
 :root {
     --date: rgba(0, 0, 0, 0.377);
+    --freeepik: rgb(38, 38, 38);
     --links: rgb(17, 17, 197);
     --links-hover: rgb(15, 15, 114);
     --projects-background: rgb(212, 232, 234);
@@ -64,11 +65,19 @@ body::before {
     }
 
 
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        font-size: .5em;
+        color: var(--freeepik);
+    }
+
     /* Name Text */
     .ayush,
     .name {
         position: fixed;
-        font-size: clamp(2em, 3vw, 4em);
+        font-size: clamp(2.2em, 3vw, 4em);
         font-weight: 700;
         margin-bottom: 6em;
     }

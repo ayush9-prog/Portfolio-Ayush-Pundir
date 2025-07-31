@@ -11,12 +11,21 @@
     list-style: none;
     font-family: "Press Start 2P", system-ui;
     font-weight: 450;
+    box-sizing: border-box;
 }
 
-body,
 html {
     overflow-x: hidden;
-    height: 100%;
+}
+
+body {
+    min-height: 100dvh;
+    background: url('/Back.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    /* Optional: makes image stay in place on scroll */
 }
 
 /* Colors */
@@ -24,31 +33,41 @@ html {
     --background-color: white;
 }
 
+
+/* Upper */
+.upper {
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
 /* Wrapper */
 .nav {
+    position: relative;
+    /* Make it the positioning context */
     height: 100dvh;
-    width: 100%;
     display: flex;
     flex-direction: column;
-    /* stack vertically */
     justify-content: center;
-    /* vertical center */
     align-items: flex-start;
-    /* horizontal center */
     text-align: left;
     padding-left: 5em;
 }
 
+
 /* Name Text */
 .ayush,
 .name {
+    position: fixed;
     font-size: 2.3em;
     font-weight: 700;
-    margin-bottom: .6em;
+    margin-bottom: 6em;
 }
 
 /* Links */
 .links {
+    position: fixed;
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -56,29 +75,32 @@ html {
     color: rgb(104, 104, 233);
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 13em;
 }
 
 
 
-@media (max-width: 450px) {
-    .nav {
-        padding: 7em 2em;
-        display: flex;
-        justify-content: flex-start;
-    }
-
-    .ayush,
-    .name {
-        font-size: 1.8em;
-        text-align: left;
-        margin-bottom: 1em;
-    }
-
-    .links {
-        flex-direction: column;
-        gap: 0.8em;
-        font-size: 1em;
-        align-items: flex-start;
-        text-align: left;
-    }
+/* content */
+.content li {
+    padding: 1em 0;
+    font-size: 1.5em;
 }
+
+.content li a {
+    font-size: 1.5em;
+    padding: .4em 1em;
+    background-color: rebeccapurple;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-top: 10em; /* Push projects lower on the page */
+    width: 100%;
+    position: relative;
+    left: 10em;
+}
+
+@media (max-width: 450px) {}

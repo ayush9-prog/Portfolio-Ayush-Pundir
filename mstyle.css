@@ -19,12 +19,16 @@ html {
 }
 
 body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  z-index: -1;
-  background: url('/b.webp') center center / cover no-repeat fixed;
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: url('/b.webp') center center / cover no-repeat fixed;
 }
+
 /* Colors */
 :root {
     --date: rgba(0, 0, 0, 0.377);
@@ -36,99 +40,97 @@ body::before {
 }
 
 
-/* Upper */
-.upper {
-    display: flex;
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-}
+@media (min-width: 1100px) {
 
-/* Wrapper */
-.nav {
-    position: relative;
-    /* Make it the positioning context */
-    height: 100dvh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    text-align: left;
-    padding-left: clamp(5em, 4vw, 2em);
-}
+    /* Upper */
+    .upper {
+        display: flex;
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+    }
 
-
-/* Name Text */
-.ayush,
-.name {
-    position: fixed;
-    font-size: clamp(2em, 3vw, 4em);
-    font-weight: 700;
-    margin-bottom: 6em;
-}
-
-/* Links */
-.links {
-    position: fixed;
-    display: flex;
-    gap: 1em;
-    font-size: clamp(1.3em, 1.4vw, 2em);
-    color: var(--links);
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 13em;
-    padding-bottom: 5em;
-}
-
-.links a:hover {
-  color: var(--links-hover);
-  transition: 0.06s ease-in-out;
-}
+    /* Wrapper */
+    .nav {
+        position: relative;
+        /* Make it the positioning context */
+        height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: left;
+        padding-left: clamp(5em, 4vw, 2em);
+    }
 
 
+    /* Name Text */
+    .ayush,
+    .name {
+        position: fixed;
+        font-size: clamp(2em, 3vw, 4em);
+        font-weight: 700;
+        margin-bottom: 6em;
+    }
 
-/* content */
-.content li {
-    padding: .5em 0;
-    font-size: clamp(1.2em, 1.4vw, 1.5em);
-}
+    /* Links */
+    .links {
+        position: fixed;
+        display: flex;
+        gap: 1em;
+        font-size: clamp(1.3em, 1.4vw, 2em);
+        color: var(--links);
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 13em;
+        padding-bottom: 5em;
+    }
 
-.content li a {
-    font-size: clamp(1.5em, 2vw, 3em);
-    padding: .4em 1em;
-    background-color: var(--projects-background);
-    transform: scale(1);
-    transition: transform 0.2s ease-in-out;
-}
-
-.content li a:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 20px 0 var(--projects-background-shadow), 0 1.5px 4px 0 rgba(0,0,0,0.12);
-    transition: transform 0.2s ease-in-out;
-}
-
-
-.content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-top: 35vh; /* Push projects lower on the page */
-    position: relative;
-    left: 10em;
-}
-
-.content a {
-    display: flex;
-    gap: 2em;
-}
-
-.date {
-    color: var(--date);
-}
+    .links a:hover {
+        color: var(--links-hover);
+        transition: 0.06s ease-in-out;
+    }
 
 
 
-@media (max-width: 1200px) {
+    /* content */
+    .content li {
+        padding: .5em 0;
+        font-size: clamp(1.2em, 1.4vw, 1.5em);
+    }
 
-    
+    .content li a {
+        font-size: clamp(1.5em, 2vw, 3em);
+        padding: .4em 1em;
+        background-color: var(--projects-background);
+        transform: scale(1);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .content li a:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0 20px 0 var(--projects-background-shadow), 0 1.5px 4px 0 rgba(0, 0, 0, 0.12);
+        transition: transform 0.2s ease-in-out;
+    }
+
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 35vh;
+        /* Push projects lower on the page */
+        position: relative;
+        left: 10em;
+    }
+
+    .content a {
+        display: flex;
+        gap: 2em;
+    }
+
+    .date {
+        color: var(--date);
+    }
+
 }

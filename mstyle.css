@@ -36,7 +36,7 @@ html {
 @media (min-width: 1100px) {
 
     body {
-        background-image: url('./v.gif');
+        background-image: url('v.gif');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: top right;
@@ -151,7 +151,7 @@ html {
 
 
     body {
-        background-image: url('./v.gif');
+        background-image: url('v.gif');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: left top;

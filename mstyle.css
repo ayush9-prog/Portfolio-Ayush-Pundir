@@ -33,7 +33,36 @@ html {
 }
 
 
-@media (min-width: 1100px) {
+
+
+
+/* Slide up animation keyframes */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Initial state for animation */
+.content {
+    opacity: 0;
+    animation: slideUp .5s ease-out 0.2s forwards;
+}
+
+
+.content li {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: slideUp 0.5s cubic-bezier(.23, 1.01, .32, 1) forwards;
+}
+
+@media (min-width: 1200px) {
 
     body {
         background-image: url('v.gif');
@@ -147,7 +176,7 @@ html {
 
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
 
 
     body {
@@ -155,6 +184,7 @@ html {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: left top;
+        min-height: 100vh;
     }
 
     /* Name */
@@ -171,8 +201,8 @@ html {
         display: flex;
         gap: 1em;
         font-size: clamp(.7em, 2vw, 3em);
-        padding-left: 3.6em;
-        padding-top: 1em;
+        padding-left: 3.4em;
+        padding-top: 1.6em;
         color: var(--links);
     }
 
@@ -184,7 +214,7 @@ html {
 
     .content li a {
         font-size: clamp(1.3em, 2vw, 3em);
-        padding: 1em .5em;
+        padding: 1em clamp(1em, 2vw, 1.5em);
         background-color: var(--projects-background);
         transform: scale(1);
         transition: transform 0.2s ease-in-out;
@@ -195,7 +225,7 @@ html {
     .date {
         color: var(--date);
     }
-    
+
     .content {
         display: flex;
         flex-direction: column;
@@ -207,10 +237,10 @@ html {
 
     .content a {
         display: flex;
-        gap: 2em;
+        gap: clamp(5em, 30em, 4em);
     }
 
-    .footer{
+    .footer {
         display: flex;
         font-size: clamp(.5em, 1.4vw, 1.5em);
         justify-content: center;
@@ -219,4 +249,14 @@ html {
         bottom: 2em;
     }
 
+
+    .footer {
+        margin-top: auto;
+        width: 100%;
+        position: relative;
+        /* Remove relative/fixed */
+        bottom: 3em;
+        justify-content: center;
+        display: flex;
+    }
 }

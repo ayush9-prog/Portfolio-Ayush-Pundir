@@ -25,7 +25,7 @@ html {
     --date: rgba(0, 0, 0, 0.377);
     --ayush: rgb(255, 255, 255);
     --freeepik: rgb(38, 38, 38);
-    --links: rgb(17, 17, 197);
+    --links: rgb(97, 97, 189);
     --links-hover: rgb(15, 15, 114);
     --projects-background: rgb(212, 232, 234);
     --projects-background-shadow: rgba(0, 0, 0, 0.331);
@@ -39,7 +39,7 @@ html {
         background-image: url('/v.gif');
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: top right;
         background-attachment: fixed;
     }
 
@@ -71,6 +71,8 @@ html {
         left: 0;
         font-size: .5em;
         color: var(--freeepik);
+        bottom: 1em;
+        left: 1em;
     }
 
     /* Name Text */
@@ -152,7 +154,7 @@ html {
         background-image: url('/v.gif');
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: left top;
     }
 
     /* Name */
@@ -211,7 +213,7 @@ html {
         justify-content: center;
         color: var(--freeepik);
         position: relative;
-        bottom: 0;
+        bottom: 2em;
     }
 
 }

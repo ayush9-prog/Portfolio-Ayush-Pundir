@@ -23,6 +23,7 @@ html {
 /* Colors */
 :root {
     --date: rgba(0, 0, 0, 0.377);
+    --ayush: rgb(255, 255, 255);
     --freeepik: rgb(38, 38, 38);
     --links: rgb(17, 17, 197);
     --links-hover: rgb(15, 15, 114);
@@ -35,7 +36,7 @@ html {
 @media (min-width: 1100px) {
 
     body {
-        background-image: url('/b.webp');
+        background-image: url('/v.gif');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -79,6 +80,7 @@ html {
         font-size: clamp(2.2em, 3vw, 4em);
         font-weight: 700;
         margin-bottom: 6em;
+        color: var(--ayush);
     }
 
     /* Links */
@@ -147,7 +149,7 @@ html {
 
 
     body {
-        background-image: url('/b.webp');
+        background-image: url('/v.gif');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -160,6 +162,7 @@ html {
         padding-left: 1em;
         padding-right: 1em;
         font-size: clamp(2.5em, 2vw, 3em);
+        color: var(--ayush);
     }
 
     .links {
@@ -207,6 +210,8 @@ html {
         font-size: clamp(.5em, 1.4vw, 1.5em);
         justify-content: center;
         color: var(--freeepik);
+        position: relative;
+        bottom: 0;
     }
 
 }

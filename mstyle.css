@@ -22,12 +22,12 @@ html {
 
 /* Colors */
 :root {
-    --date: rgba(0, 0, 0, 0.377);
+    --date: rgba(0, 0, 0, 0.541);
     --ayush: rgb(255, 255, 255);
     --freeepik: rgb(38, 38, 38);
     --links: rgb(97, 97, 189);
     --links-hover: rgb(15, 15, 114);
-    --projects-background: rgb(212, 232, 234);
+    --projects-background: rgb(88, 234, 35);
     --projects-background-shadow: rgba(0, 0, 0, 0.331);
     --projects-color: rgb(250, 241, 241);
 }
@@ -184,7 +184,7 @@ html {
 
     .content li a {
         font-size: clamp(1.3em, 2vw, 3em);
-        padding: 1em .8em;
+        padding: 1em .5em;
         background-color: var(--projects-background);
         transform: scale(1);
         transition: transform 0.2s ease-in-out;
@@ -192,7 +192,10 @@ html {
 
 
 
-
+    .date {
+        color: var(--date);
+    }
+    
     .content {
         display: flex;
         flex-direction: column;

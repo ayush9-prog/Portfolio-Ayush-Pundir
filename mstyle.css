@@ -18,6 +18,10 @@ html {
     overflow-x: hidden;
 }
 
+ul {
+    display: none;
+}
+
 
 
 /* Colors */
@@ -237,26 +241,22 @@ html {
 
     .content a {
         display: flex;
-        gap: clamp(5em, 30em, 4em);
+        gap: clamp(18vw, 18vw, 50em);
     }
 
-    .footer {
-        display: flex;
-        font-size: clamp(.5em, 1.4vw, 1.5em);
-        justify-content: center;
-        color: var(--freeepik);
-        position: relative;
-        bottom: 2em;
-    }
+    
 
 
     .footer {
-        margin-top: auto;
-        width: 100%;
         position: relative;
         /* Remove relative/fixed */
         bottom: 3em;
-        justify-content: center;
+        justify-content: flex-end;
         display: flex;
+        color: var(--freeepik);
+        font-size: 8px;
+        position: relative;
+        top: 10px;
+        right: 10px;
     }
 }

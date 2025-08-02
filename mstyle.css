@@ -33,9 +33,9 @@ ul {
 :root {
     --date: rgba(0, 0, 0, 0.541);
     --ayush: rgb(255, 255, 255);
-    --freeepik: rgb(38, 38, 38);
-    --links: rgb(97, 97, 189);
-    --links-hover: rgb(15, 15, 114);
+    --freeepik: rgb(115, 115, 115);
+    --links: rgb(255, 202, 43);
+    --links-hover: rgb(95, 181, 35);
     --projects-background: rgb(88, 234, 35);
     --projects-background-shadow: rgba(0, 0, 0, 0.331);
     --projects-color: rgb(250, 241, 241);
@@ -74,12 +74,15 @@ ul {
 @media (min-width: 1200px) {
 
     body {
-        background-image: url('v.gif');
+        background-image: url('e.gif');
         background-size: cover;
+        backdrop-filter: blur(1.4px);
         background-repeat: no-repeat;
         background-position: top right;
         background-attachment: fixed;
     }
+
+    
 
     /* Upper */
     .upper {
@@ -189,11 +192,12 @@ ul {
 
 
     body {
-        background-image: url('v.gif');
+        background-image: url('e.gif');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: left top;
         min-height: 100vh;
+        backdrop-filter: blur(1.4px);
         min-width: auto;
     }
 

@@ -14,18 +14,20 @@
     box-sizing: border-box;
 }
 
-html , body{
+html,
+body {
     overflow-x: hidden;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     min-height: 100vh;
 }
 
-ul {
+/* ul {
     display: none;
-}
+} */
 
 
 
@@ -71,22 +73,30 @@ ul {
     animation: slideUp 0.5s cubic-bezier(.23, 1.01, .32, 1) forwards;
 }
 
+
+/* For Monitors */
 @media (min-width: 1200px) {
 
+    /* Background fix — use a pseudo-element instead of backdrop-filter on body */
     body {
-        background-image: url('e.gif');
-        background-size: cover;
-        backdrop-filter: blur(1.4px);
-        background-repeat: no-repeat;
-        background-position: top right;
-        background-attachment: fixed;
+        margin: 0;
+        padding: 0;
     }
 
-    
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image: url('e.gif');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top right;
+        filter: blur(1.4px);
+        z-index: -1;
+    }
 
     /* Upper */
     .upper {
-        display: flex;
         display: flex;
         justify-content: space-between;
         width: 80%;
@@ -95,7 +105,6 @@ ul {
     /* Wrapper */
     .nav {
         position: relative;
-        /* Make it the positioning context */
         height: 100dvh;
         display: flex;
         flex-direction: column;
@@ -105,38 +114,39 @@ ul {
         padding-left: clamp(5em, 4vw, 2em);
     }
 
-
     .footer {
         position: fixed;
-        bottom: 0;
-        left: 0;
-        font-size: .5em;
-        color: var(--freeepik);
         bottom: 1em;
         left: 1em;
+        font-size: .5em;
+        color: var(--freeepik);
+        z-index: 1000;
     }
 
-    /* Name Text */
+    /* Name Text — fixed to viewport */
     .ayush,
     .name {
         position: fixed;
-        font-size: clamp(2.2em, 3vw, 4em);
+        display: flex;
+        align-items: center;
+        font-size: clamp(1.8em, 4vw, 5em);
         font-weight: 700;
-        margin-bottom: 6em;
         color: var(--ayush);
+        z-index: 1000;
     }
 
-    /* Links */
+    /* Links — fixed to viewport */
     .links {
         position: fixed;
         display: flex;
+        align-items: center;
+        padding-top: 11em;
         gap: 1em;
-        font-size: clamp(1.3em, 1.4vw, 2em);
+        font-size: clamp(1.5em, 1vw, 35vh);
         color: var(--links);
         flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 13em;
-        padding-bottom: 5em;
+        justify-content: flex-start;
+        z-index: 1000;
     }
 
     .links a:hover {
@@ -144,9 +154,17 @@ ul {
         transition: 0.06s ease-in-out;
     }
 
+    /* Content */
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 35vh; /* Push projects lower */
+        position: relative;
+        left: 15vw;
+        z-index: 1; /* behind name/links */
+    }
 
-
-    /* content */
     .content li {
         padding: .5em 0;
         font-size: clamp(1.2em, 1.4vw, 1.5em);
@@ -162,19 +180,8 @@ ul {
 
     .content li a:hover {
         transform: scale(1.02);
-        box-shadow: 0 0 20px 0 var(--projects-background-shadow), 0 1.5px 4px 0 rgba(0, 0, 0, 0.12);
-        transition: transform 0.2s ease-in-out;
-    }
-
-
-    .content {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        margin-top: 35vh;
-        /* Push projects lower on the page */
-        position: relative;
-        left: 10em;
+        box-shadow: 0 0 20px 0 var(--projects-background-shadow),
+                    0 1.5px 4px 0 rgba(0, 0, 0, 0.12);
     }
 
     .content a {
@@ -185,9 +192,11 @@ ul {
     .date {
         color: var(--date);
     }
-
 }
 
+
+
+/* For Mobile */
 @media (max-width: 1200px) {
 
 
@@ -214,7 +223,7 @@ ul {
     .links {
         display: flex;
         gap: 1em;
-        font-size: clamp( .7em, 2vw, 3em);
+        font-size: clamp(.7em, 2vw, 3em);
         margin-left: 45px;
         padding-top: 10px;
         color: var(--links);
@@ -254,7 +263,7 @@ ul {
         gap: clamp(18vw, 18vw, 50em);
     }
 
-    
+
 
 
     .footer {

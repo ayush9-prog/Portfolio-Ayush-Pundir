@@ -159,10 +159,12 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        margin-top: 35vh; /* Push projects lower */
+        margin-top: 35vh;
+        /* Push projects lower */
         position: relative;
         left: 15vw;
-        z-index: 1; /* behind name/links */
+        z-index: 1;
+        /* behind name/links */
     }
 
     .content li {
@@ -181,7 +183,7 @@ body {
     .content li a:hover {
         transform: scale(1.02);
         box-shadow: 0 0 20px 0 var(--projects-background-shadow),
-                    0 1.5px 4px 0 rgba(0, 0, 0, 0.12);
+            0 1.5px 4px 0 rgba(0, 0, 0, 0.12);
     }
 
     .content a {
@@ -194,11 +196,21 @@ body {
     }
 }
 
-
-
 /* For Mobile */
 @media (max-width: 1200px) {
 
+    body {
+        background-attachment: scroll !important;
+        background-position: left top;
+    }
+
+    html,
+    body {
+        height: auto;
+        /* prevent background lock */
+        overflow-y: auto;
+        /* allow vertical scroll */
+    }
 
     body {
         background-image: url('e.gif');
